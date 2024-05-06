@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Zangaloro</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="mhw3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- ROBOTO DA GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- NUNITO DA GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- RALEWAY DA GOOGLE FONTS -->
+    <meta name="viewport" content="width=device-width" />
+    <!-- MOBILE -->
+    <script src="mhw3.js" defer></script>
+    <!-- PERMESSI PER FAR FUNZIONARE LE API PER LA MAPPPA -->
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+  </head>
+  <body>
+    <nav>
+      <img id="logo" src="C:\Users\SAMUELE\Desktop\mhw3\IMG\ZANGALORO.it.png" />
+      <div id="FBoxIconeNav">
+        <a href="#">
+          <img class="FItemIconeNav" id="mobileUser" src="C:\Users\SAMUELE\Desktop\mhw3\IMG\user.svg" />
+        </a>
+        <a href="#">
+          <img class="FItemIconeNav" id="mobileShop" src="C:\Users\SAMUELE\Desktop\mhw3\IMG\cart.svg" />
+        </a>
+      </div>
+    </nav>
+    <header>
+      <h1>BENVENUTO IN ZANGALORO</h1>
+      <div id="searchbtn">
+        <input id="searchBar" placeholder="Inserisci il tuo indirizzo">
+        <div id="black">
+          <!-- SFONDO NERO DELL'ICONA DI RICERCA -->
+          <a href="#">
+            <img id="searchimg" src="C:\Users\SAMUELE\Desktop\mhw3\IMG\search.png" />
+          </a>
+        </div>
+      </div>
+      <div id="FBoxHeader">
+        <a href="#">
+          <strong>RITIRA IN NEGOZIO</strong>
+          <img id="FItemHeader" src="C:\Users\SAMUELE\Desktop\mhw3\IMG\shop-icon-bk.png" />
+        </a>
+      </div>
+      <div id="login" class="hidden">
+        <div id="navLogin">
+          <h2>ACCEDI</h2>
+        </div>
+        <h2 class="spazio">ACCEDI CON LE TUE CREDENZIALI</h2>
+        <div>
+          <input class="loginBar" placeholder="INDIRIZZO E-MAIL">
+        </div>
+        <div>
+          <input class="loginBar" placeholder="PASSWORD">
+        </div>
+        <div>
+          <a href="#">
+            <p id="passwordDimenticata"> HAI DIMENTICATO LA PASSWORD?</p>
+          </a>
+        </div>
+        <div>
+          <h2 class="spazio">NON SEI ANCORA REGISTRATO?</h2>
+        </div>
+        <a href="#">
+        <div id="registratiBtn">
+            REGISTRATI
+          </div>
+        </a>
+          <div id="ftLogin">
+          <div id="FBoxFtLogin">
+            <a href="#">
+            <div id="indietroBtn">
+                INDIETRO
+            </div>
+            </a>
+            <a href="#">
+            <div id="accediBtn">
+                <p id="accedi">ACCEDI</p>
+              </div>
+            </a>
+          </div>
+          </div>
+      </div>
+    </header>
+      <div>
+        <section id="FBoxImg" class="mobileImg">
+            <img class="FItemImg" src="C:\Users\SAMUELE\Desktop\mhw3\IMG\burger.png" />
+            <img class="FItemImg" src="C:\Users\SAMUELE\Desktop\mhw3\IMG\cafe.png" />   
+            <img class="FItemImg" src="C:\Users\SAMUELE\Desktop\mhw3\IMG\poke.png" />
+            <img class="FItemImg" src="C:\Users\SAMUELE\Desktop\mhw3\IMG\sushi.jpg" />
+            <img class="FItemImg" src="C:\Users\SAMUELE\Desktop\mhw3\IMG\salumi.png" />
+          </section>
+          <section id="modalView" class="hidden"></section>
+      </div>
+    <footer>
+        <div>
+          <a href="#/">
+          <img id="logoFt" src="C:\Users\SAMUELE\Desktop\mhw3\IMG\ZANGALORO.it.png" />
+          </a>
+          <div id="mappa"></div>
+        </div>
+        <div id="fontFt">
+          <p>
+            <br>ZANGA S.R.L.</br>P.IVA 06245000820
+          </p>
+          <p>POWERED BY <a href="http://www.quattroweb.it/">QUATTROWEB S.R.L.</a>
+          </p>
+        </div>
+        <div id="scritteFt">
+          <div id="ft">
+            <a href="#">
+              <strong class="mobileP">
+                <p>SCRIVI UNA RECENSIONE</p>
+              </strong>
+            </a>
+            <a href="#">
+              <strong class="mobileP">
+                <p>PRIVACY POLICY</p>
+              </strong>
+            </a>
+            <a href="#">
+              <strong>
+                <p>LISTA ALLERGENI</p>
+              </strong>
+            </a>
+            <a href="#">
+              <strong>
+                <p>FAQ</p>
+              </strong>
+            </a>
+            <a href="#">
+              <strong>
+                <p>CONTATTI</p>
+              </strong>
+            </a>
+          </div>
+        </div>
+        <a href="https://www.instagram.com/zangaloromeatfactory/" target="_blank">
+          <img class="socialFt" src="C:\Users\SAMUELE\Desktop\mhw3\IMG\insta-black.svg" />
+        </a>
+        <a href="https://www.facebook.com/zangaloromeatfactory?fref=ts" target="_blank">
+          <img class="socialFt" src="C:\Users\SAMUELE\Desktop\mhw3\IMG\fb-black.svg" />
+        </a>
+    </footer>
+  </body>
+</html>
